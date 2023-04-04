@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/LeetcodeGuof.iml" filepath="$PROJECT_DIR$/LeetcodeGuof.iml" />
+      <module fileurl="file://$PROJECT_DIR$/intermediate-algorithm/intermediate-algorithm.iml" filepath="$PROJECT_DIR$/intermediate-algorithm/intermediate-algorithm.iml" />
       <module fileurl="file://$PROJECT_DIR$/primary-algorithm/primary-algorithm.iml" filepath="$PROJECT_DIR$/primary-algorithm/primary-algorithm.iml" />
     </modules>
   </component>
