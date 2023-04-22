@@ -2,16 +2,16 @@ package com.feng.sort_and_search.merge_interval;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedList;
+import java.util.Comparator;
 import java.util.List;
 
 class Solution {
     public int[][] merge(int[][] intervals) {
-        Arrays.sort(intervals, (o1, o2) -> o1[0] - o2[0]);
+        Arrays.sort(intervals, Comparator.comparingInt(o -> o[0]));
         List<int[]> outputList = new ArrayList<>();
 
-        int first = 0;
-        int end = 0;
+        int first;
+        int end;
         for (int i = 0; i < intervals.length; i++) {
             first = intervals[i][0]; // 等于第一个的开头
             end = intervals[i][1]; // 等于第一个的结尾
