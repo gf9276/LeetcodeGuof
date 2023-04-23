@@ -1,7 +1,5 @@
 package com.feng.arrays_and_strings.longest_substring_without_repeating_characters;
 
-import java.util.Arrays;
-
 /**
  * ClassName: Test
  * Package: com.feng.arrays_and_strings.longest_substring_without_repeating_characters
