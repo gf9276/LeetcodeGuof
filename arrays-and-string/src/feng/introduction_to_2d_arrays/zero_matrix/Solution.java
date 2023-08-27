@@ -1,4 +1,4 @@
-package feng.zero_matrix;
+package feng.introduction_to_2d_arrays.zero_matrix;
 
 import java.util.Arrays;
 import java.util.HashSet;

@@ -1,4 +1,4 @@
-package feng.find_the_central_index_of_an_array;
+package feng.introduction_to_arrays.find_the_central_index_of_an_array;
 
 /**
  * ClassName: Solution

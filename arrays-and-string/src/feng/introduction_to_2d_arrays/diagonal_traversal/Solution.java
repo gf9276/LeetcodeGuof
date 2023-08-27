@@ -1,4 +1,4 @@
-package feng.diagonal_traversal;
+package feng.introduction_to_2d_arrays.diagonal_traversal;
 
 /**
  * ClassName: Solution

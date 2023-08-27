@@ -1,6 +1,4 @@
-package feng.diagonal_traversal;
-
-import java.util.Arrays;
+package feng.introduction_to_strings.implement_strstr;
 
 /**
  * ClassName: Test
@@ -12,12 +10,10 @@ import java.util.Arrays;
  * @Version 1.0
  */
 public class Test {
+
     public static void main(String[] args) {
         Solution solution = new Solution();
-        int[][] mat = new int[1][1];
-        mat[0] = new int[]{1};
-//        mat[1] = new int[]{4, 5, 6};
-//        mat[2] = new int[]{7, 8, 9};
-        System.out.println(Arrays.toString(solution.findDiagonalOrder(mat)));
+        int i = solution.strStr("aabaaabaaac", "aabaaac");
+        System.out.println(i);
     }
 }

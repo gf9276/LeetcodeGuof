@@ -1,4 +1,4 @@
-package feng.find_the_central_index_of_an_array;
+package feng.introduction_to_strings.longest_palindromic_substring;
 
 /**
  * ClassName: Test
@@ -10,8 +10,10 @@ package feng.find_the_central_index_of_an_array;
  * @Version 1.0
  */
 public class Test {
+
     public static void main(String[] args) {
-        Solution solu = new Solution();
-        System.out.println(solu.pivotIndex(new int[]{-1,-1,-1,-1,-1,0}));
+        Solution solo = new Solution();
+        String output = solo.longestPalindrome("aacabdkacaa");
+        System.out.println(output);
     }
 }

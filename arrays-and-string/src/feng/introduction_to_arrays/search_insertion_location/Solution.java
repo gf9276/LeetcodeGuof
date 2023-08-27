@@ -1,4 +1,4 @@
-package feng.search_insertion_location;
+package feng.introduction_to_arrays.search_insertion_location;
 
 /**
  * ClassName: Solution

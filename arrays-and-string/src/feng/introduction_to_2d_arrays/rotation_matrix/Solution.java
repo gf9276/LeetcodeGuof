@@ -1,4 +1,4 @@
-package feng.rotation_matrix;
+package feng.introduction_to_2d_arrays.rotation_matrix;
 
 
 class Solution {
