@@ -1,4 +1,4 @@
-package com.feng.all_hash_map.design_hash_set;
+package com.feng.design_hash.design_hash_set;
 
 import java.util.ArrayList;
 import java.util.List;
