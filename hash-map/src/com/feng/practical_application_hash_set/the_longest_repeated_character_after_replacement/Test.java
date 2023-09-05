@@ -1,4 +1,4 @@
-package com.feng.practical_application_hash_set.num_that_only_appears_once;
+package com.feng.practical_application_hash_set.the_longest_repeated_character_after_replacement;
 
 /**
  * ClassName: Test
@@ -12,9 +12,7 @@ package com.feng.practical_application_hash_set.num_that_only_appears_once;
 public class Test {
     public static void main(String[] args) {
         Solution solution = new Solution();
-        int[] input = new int[]{2, 2, 1};
-
-        solution.singleNumber(input);
+        solution.characterReplacement("ABCDE", 1);
 
     }
 }

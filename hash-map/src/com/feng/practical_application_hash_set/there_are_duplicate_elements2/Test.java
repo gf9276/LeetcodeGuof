@@ -1,4 +1,4 @@
-package com.feng.practical_application_hash_set.num_that_only_appears_once;
+package com.feng.practical_application_hash_set.there_are_duplicate_elements2;
 
 /**
  * ClassName: Test
@@ -12,9 +12,7 @@ package com.feng.practical_application_hash_set.num_that_only_appears_once;
 public class Test {
     public static void main(String[] args) {
         Solution solution = new Solution();
-        int[] input = new int[]{2, 2, 1};
-
-        solution.singleNumber(input);
+        solution.containsNearbyDuplicate(new int[]{1, 2, 3, 1}, 3);
 
     }
 }

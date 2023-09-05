@@ -1,4 +1,4 @@
-package com.feng.practical_application_hash_set.num_that_only_appears_once;
+package com.feng.practical_application_hash_set.isomorphic_strings;
 
 /**
  * ClassName: Test
@@ -13,8 +13,6 @@ public class Test {
     public static void main(String[] args) {
         Solution solution = new Solution();
         int[] input = new int[]{2, 2, 1};
-
-        solution.singleNumber(input);
 
     }
 }
