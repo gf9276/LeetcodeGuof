@@ -7,7 +7,6 @@ class TwoSum {
     List<Integer> nums = new ArrayList<>();
 
     public TwoSum() {
-        nums.clear();
     }
 
     public void add(int number) {
@@ -17,34 +16,16 @@ class TwoSum {
     public boolean find(int target) {
         if (nums.size() <= 1) return false;
 
-        Map<Integer, Integer> map1 = new HashMap<>();
-        Map<Integer, Integer> map2 = new HashMap<>();
+        Set<Integer> set = new HashSet<>();
 
         for (int i : nums) {
-            map1.put(i, target - i);
-            if (map2.containsKey(i)) {
-                map2.put(i, map2.get(i) + 1);
-            } else {
-                map2.put(i, 1);
-            }
-        }
-
-        for (Integer key : map1.keySet()) {
-            int tmp;
-            if (map2.containsKey(map1.get(key))) {
-                tmp = map2.get(key);
-            } else {
-                continue;
-            }
-            if (Objects.equals(key, map1.get(key))) {
-                tmp -= 2;
-            } else {
-                tmp -= 1;
-            }
-            if (tmp >= 0) {
+            if (set.contains(target - i)) {
                 return true;
             }
+
+            set.add(i);
         }
+
         return false;
     }
 }
