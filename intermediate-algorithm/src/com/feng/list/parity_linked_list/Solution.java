@@ -11,32 +11,52 @@ package com.feng.list.parity_linked_list;
  */
 class Solution {
     public ListNode oddEvenList(ListNode head) {
+//        if (head == null || head.next == null) {
+//            return head;
+//        }
+//
+//        ListNode oddMove = head;
+//        ListNode evenMove = head.next;
+//        ListNode evenHead = head.next;
+//
+//        while (true) {
+//
+//            if (oddMove.next != null && oddMove.next.next != null) {
+//                oddMove.next = oddMove.next.next;
+//                oddMove = oddMove.next;
+//            }
+//            if (evenMove.next != null && evenMove.next.next != null) {
+//                evenMove.next = evenMove.next.next;
+//                evenMove = evenMove.next;
+//            }
+//            if ((oddMove.next == null || oddMove.next.next == null) && (evenMove.next == null || evenMove.next.next == null)) {
+//                break;
+//            }
+//
+//        }
+//
+//        oddMove.next = evenHead;
+//        evenMove.next = null;
+//        return head;
+
+        // 拉直法，先串奇数
         if (head == null || head.next == null) {
             return head;
         }
-
         ListNode oddMove = head;
         ListNode evenMove = head.next;
         ListNode evenHead = head.next;
 
         while (true) {
-
-            if (oddMove.next != null && oddMove.next.next != null) {
-                oddMove.next = oddMove.next.next;
-                oddMove = oddMove.next;
-            }
-            if (evenMove.next != null && evenMove.next.next != null) {
-                evenMove.next = evenMove.next.next;
-                evenMove = evenMove.next;
-            }
-            if ((oddMove.next == null || oddMove.next.next == null) && (evenMove.next == null || evenMove.next.next == null)) {
+            if (evenMove == null || evenMove.next == null) {
+                oddMove.next = evenHead;
                 break;
             }
-
+            oddMove.next = evenMove.next;
+            oddMove = oddMove.next;
+            evenMove.next = oddMove.next;
+            evenMove = evenMove.next;
         }
-
-        oddMove.next = evenHead;
-        evenMove.next = null;
         return head;
     }
 }

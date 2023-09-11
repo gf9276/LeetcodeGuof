@@ -1,5 +1,8 @@
 package com.feng.arrays_and_strings.longest_substring_without_repeating_characters;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * ClassName: Solution
  * Package: com.feng.arrays_and_strings.longest_substring_without_repeating_characters
@@ -11,18 +14,40 @@ package com.feng.arrays_and_strings.longest_substring_without_repeating_characte
  */
 class Solution {
     public int lengthOfLongestSubstring(String s) {
-        boolean[] seen = new boolean[255];
-        int max_len = 0, j = 0; // j表示不含有重复字符的子串的第一个字符下标
-        for (int i = 0; i < s.length(); i++) {
-            int cInt = s.charAt(i);
-            while (seen[cInt]) {
-                // 如果没有重复，执行循环，j停的加，直到找到第一个重复的字符，其实前面加个j=i，效果一样的
-                seen[s.charAt(j)] = false;
-                ++j;
+//        boolean[] seen = new boolean[255];
+//        int max_len = 0, j = 0; // j表示不含有重复字符的子串的第一个字符下标
+//        for (int i = 0; i < s.length(); i++) {
+//            int cInt = s.charAt(i);
+//            while (seen[cInt]) {
+//                // 如果没有重复，执行循环，j停的加，直到找到第一个重复的字符，其实前面加个j=i，效果一样的
+//                seen[s.charAt(j)] = false;
+//                ++j;
+//            }
+//            seen[cInt] = true; // 将字符标记为已经访问过了
+//            max_len = Math.max(max_len, i - j + 1); // i为什么比j大？
+//        }
+//        return max_len;
+
+
+        Set<Character> set = new HashSet<>();
+
+        int left = 0;
+        int right = 0;
+        int maxLength = 0;
+
+        while (right < s.length()) {
+            if (!set.contains(s.charAt(right))) {
+                set.add(s.charAt(right));
+            } else {
+                while (s.charAt(left) != s.charAt(right)) {
+                    set.remove(s.charAt(left));
+                    left++;
+                }
+                left++;
             }
-            seen[cInt] = true; // 将字符标记为已经访问过了
-            max_len = Math.max(max_len, i - j + 1); // i为什么比j大？
+            maxLength = Math.max(maxLength, right - left + 1);
+            right++;
         }
-        return max_len;
+        return maxLength;
     }
 }
