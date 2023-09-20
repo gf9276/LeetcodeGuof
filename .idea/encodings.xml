@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/array-class-algorithm/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/array-class-algorithm/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/arrays-and-string/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/arrays-and-string/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/binary-search/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/binary-search/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/binary-tree/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/binary-tree/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/data-structure-picture/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/data-structure-picture/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dynamic-programming/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dynamic-programming/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hash-map/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hash-map/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/intermediate-algorithm/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/intermediate-algorithm/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/linked-list-algorithm/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/linked-list-algorithm/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/others/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/others/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/primary-algorithm/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/primary-algorithm/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/queue-and-stack/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/queue-and-stack/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
