@@ -23,7 +23,7 @@ class Solution {
         return set.size();
     }
 
-    public  class UnionFind {
+    public class UnionFind {
         int[] root;
         int[] rank;
 
@@ -57,8 +57,6 @@ class Solution {
                 }
             }
         }
-
-        ;
 
         public boolean connected(int x, int y) {
             return find(x) == find(y);
