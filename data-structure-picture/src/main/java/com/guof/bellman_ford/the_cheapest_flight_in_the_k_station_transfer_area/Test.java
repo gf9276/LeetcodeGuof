@@ -1,4 +1,4 @@
-package com.guof.linear_dp.double_string_problem_dimensioned_dijk.scramble_string;
+package com.guof.bellman_ford.the_cheapest_flight_in_the_k_station_transfer_area;
 
 /**
  * ClassName: Test
@@ -12,7 +12,5 @@ package com.guof.linear_dp.double_string_problem_dimensioned_dijk.scramble_strin
 public class Test {
     public static void main(String[] args) {
         Solution solution = new Solution();
-        solution.isScramble("abcdbdacbdac",
-                "bdacabcdbdac");
     }
 }
