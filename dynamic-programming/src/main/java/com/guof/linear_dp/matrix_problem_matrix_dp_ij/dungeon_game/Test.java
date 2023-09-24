@@ -1,4 +1,4 @@
-package com.guof.linear_dp.single_string_problem_ik.arrange_a_mailbox;
+package com.guof.linear_dp.matrix_problem_matrix_dp_ij.dungeon_game;
 
 /**
  * ClassName: Test
@@ -12,6 +12,6 @@ package com.guof.linear_dp.single_string_problem_ik.arrange_a_mailbox;
 public class Test {
     public static void main(String[] args) {
         Solution solution = new Solution();
-        solution.minDistance(new int[]{1, 8, 12, 10, 3}, 3);
+        solution.calculateMinimumHP(new int[][]{{-2, -3, 3}, {-5, -10, 1}, {10, 30, -5}});
     }
 }
