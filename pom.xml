@@ -21,6 +21,8 @@
         <module>data-structure-picture</module>
         <module>primary-algorithm</module>
         <module>queue-and-stack</module>
+        <module>priority-queue</module>
+        <module>priority-queue/advanced-algorithms</module>
     </modules>
 
     <properties>
