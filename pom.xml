@@ -22,7 +22,7 @@
         <module>primary-algorithm</module>
         <module>queue-and-stack</module>
         <module>priority-queue</module>
-        <module>priority-queue/advanced-algorithms</module>
+        <module>advanced-algorithms</module>
     </modules>
 
     <properties>

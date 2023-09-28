@@ -17,8 +17,7 @@ import java.util.List;
 public class Test {
     public static void main(String[] args) {
         Solution solu = new Solution();
-        List<String> list = new ArrayList<>(Arrays.asList("hot", "dot", "dog", "lot", "log", "cog"));
-
-        solu.ladderLength("hit", "cog", list);
+        List<String> list = new ArrayList<>(Arrays.asList("lest","leet","lose","code","lode","robe","lost"));
+        System.out.println(solu.ladderLength("leet", "code", list));
     }
 }
