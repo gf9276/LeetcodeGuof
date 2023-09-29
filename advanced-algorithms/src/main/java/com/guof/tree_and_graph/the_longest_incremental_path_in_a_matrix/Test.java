@@ -1,4 +1,4 @@
-package com.guof.tree_and_graph.nbr_of_provinces;
+package com.guof.tree_and_graph.the_longest_incremental_path_in_a_matrix;
 
 
 /**
@@ -13,7 +13,5 @@ package com.guof.tree_and_graph.nbr_of_provinces;
 public class Test {
     public static void main(String[] args) {
         Solution solution = new Solution();
-        int[][] input = new int[][]{{1, 1, 0}, {1, 1, 0}, {0, 0, 1}};
-        solution.findCircleNum(input);
     }
 }
