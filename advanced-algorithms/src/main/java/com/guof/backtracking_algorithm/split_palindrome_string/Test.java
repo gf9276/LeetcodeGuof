@@ -1,4 +1,4 @@
-package com.guof.tree_and_graph.count_smaller;
+package com.guof.backtracking_algorithm.split_palindrome_string;
 
 
 /**
@@ -13,6 +13,6 @@ package com.guof.tree_and_graph.count_smaller;
 public class Test {
     public static void main(String[] args) {
         Solution solution = new Solution();
-        solution.countSmaller(new int[]{2, 0, 1});
+        solution.partition("efe");
     }
 }

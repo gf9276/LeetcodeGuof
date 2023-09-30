@@ -1,4 +1,4 @@
-package com.guof.tree_and_graph.count_smaller;
+package com.guof.backtracking_algorithm.word_search2;
 
 
 /**
@@ -13,6 +13,8 @@ package com.guof.tree_and_graph.count_smaller;
 public class Test {
     public static void main(String[] args) {
         Solution solution = new Solution();
-        solution.countSmaller(new int[]{2, 0, 1});
+        char[][] input = {{'o','a','a','n'},{'e','t','a','e'},{'i','h','k','r'},{'i','f','l','v'}};
+        String[] input2 = {"oath","pea","eat","rain"};
+        solution.findWords(input, input2);
     }
 }
