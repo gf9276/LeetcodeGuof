@@ -6,12 +6,31 @@ class Solution {
     List<String> output;
 
     public List<String> findWords(char[][] board, String[] words) {
+        Set<Character> allC = new HashSet<>();
+        for (char[] chars : board) {
+            for (char aChar : chars) {
+                allC.add(aChar);
+            }
+        }
         Set<String> wordsSet = new HashSet<>(Arrays.asList(words));
+        for (String word : words) {
+            for (Character c : word.toCharArray()) {
+                if (!allC.contains(c)) {
+                    wordsSet.remove(word);
+                    break;
+                }
+            }
+        }
         // 这题就很垃了，有手就行
         output = new ArrayList<>();
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[i].length; j++) {
-                dfs(new StringBuilder(), board, wordsSet, i, j);
+                for (String word : wordsSet) {
+                    if (board[i][j] == word.charAt(0)) {
+                        dfs(new StringBuilder(), board, wordsSet, i, j);
+                        break;
+                    }
+                }
             }
         }
         return output;
