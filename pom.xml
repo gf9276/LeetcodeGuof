@@ -23,6 +23,7 @@
         <module>queue-and-stack</module>
         <module>priority-queue</module>
         <module>advanced-algorithms</module>
+        <module>prefix-and</module>
     </modules>
 
     <properties>
