@@ -1,4 +1,4 @@
-package com.guof.region_and_retrieval_array_immutable;
+package com.guof.two_dimensional_prefix_and.the_largest_square_bounded_by1;
 
 /**
  * ClassName: Test
@@ -11,5 +11,6 @@ package com.guof.region_and_retrieval_array_immutable;
  */
 public class Test {
     public static void main(String[] args) {
+
     }
 }

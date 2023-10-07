@@ -1,4 +1,4 @@
-package com.guof.take_down_the_sum_of_integer_pairs;
+package com.guof.one_dimensional_prefix_and.region_and_retrieval_array_immutable;
 
 /**
  * ClassName: Test
@@ -11,7 +11,5 @@ package com.guof.take_down_the_sum_of_integer_pairs;
  */
 public class Test {
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        solution.sumOfFlooredPairs(new int[]{2, 5, 9});
     }
 }

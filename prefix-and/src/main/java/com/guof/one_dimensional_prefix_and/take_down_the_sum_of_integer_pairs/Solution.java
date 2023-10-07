@@ -1,4 +1,4 @@
-package com.guof.take_down_the_sum_of_integer_pairs;
+package com.guof.one_dimensional_prefix_and.take_down_the_sum_of_integer_pairs;
 
 
 class Solution {

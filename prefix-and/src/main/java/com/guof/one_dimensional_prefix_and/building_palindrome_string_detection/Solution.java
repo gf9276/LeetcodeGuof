@@ -1,4 +1,4 @@
-package com.guof.building_palindrome_string_detection;
+package com.guof.one_dimensional_prefix_and.building_palindrome_string_detection;
 
 
 import java.util.ArrayList;

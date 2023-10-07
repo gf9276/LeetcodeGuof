@@ -1,4 +1,4 @@
-package com.guof.region_and_retrieval_array_immutable;
+package com.guof.one_dimensional_prefix_and.region_and_retrieval_array_immutable;
 
 
 class NumArray {
