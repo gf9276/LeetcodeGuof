@@ -11,9 +11,6 @@ class Solution {
         boolean[][][] allowOutflow = new boolean[heights.length][heights[0].length][2];
         for (int i = 0; i < heights.length; i++) {
             for (int j = 0; j < heights[i].length; j++) {
-                if (allowOutflow[i][j][0] & allowOutflow[i][j][1]) {
-                    continue;
-                }
                 dfs(heights, i, j, new ArrayList<>(), allowOutflow);
             }
         }
@@ -29,44 +26,66 @@ class Solution {
 
 
     public void dfs(int[][] height, int curX, int curY, List<int[]> pathList, boolean[][][] allowOutflow) {
-        if (curX >= height.length || curY >= height[0].length) {
+        if (allowOutflow[curX][curY][0] & allowOutflow[curX][curY][1]) {
+            // 没搞的必要了，一路通行
+            for (int[] point : pathList) {
+                allowOutflow[point[0]][point[1]][0] = true; // 遇到PA了
+                allowOutflow[point[0]][point[1]][1] = true; // 遇到PA了
+            }
+            allowOutflow[curX][curY][1] = true;
+            allowOutflow[curX][curY][0] = true;
+            return;
+        }
+
+        if (curX == height.length - 1 || curY == height[0].length - 1) {
             // 遇到边界了
             for (int[] point : pathList) {
                 allowOutflow[point[0]][point[1]][1] = true; // 遇到AL了
             }
-            return;
+            allowOutflow[curX][curY][1] = true;
         }
-
-        if (curX < 0 || curY < 0) {
+        if (curX == 0 || curY == 0) {
             for (int[] point : pathList) {
                 allowOutflow[point[0]][point[1]][0] = true; // 遇到PA了
             }
-            return;
+            allowOutflow[curX][curY][0] = true;
         }
 
-        if (curX + 1 >= height.length || height[curX + 1][curY] <= height[curX][curY]) {
+        if (curX + 1 < height.length && height[curX + 1][curY] <= height[curX][curY]) {
             // 如果比他高，不能走走过的路
             pathList.add(new int[]{curX, curY});
+            int tmp = height[curX][curY];
+            height[curX][curY] = Integer.MAX_VALUE;
             dfs(height, curX + 1, curY, pathList, allowOutflow);
             pathList.remove(pathList.size() - 1);
+            height[curX][curY] = tmp;
         }
-        if (curX - 1 < 0 || height[curX - 1][curY] <= height[curX][curY]) {
+        if (curX - 1 >= 0 && height[curX - 1][curY] <= height[curX][curY]) {
             // 如果比他高
             pathList.add(new int[]{curX, curY});
+            int tmp = height[curX][curY];
+            height[curX][curY] = Integer.MAX_VALUE;
             dfs(height, curX - 1, curY, pathList, allowOutflow);
             pathList.remove(pathList.size() - 1);
+            height[curX][curY] = tmp;
         }
-        if (curY + 1 >= height[0].length || height[curX][curY + 1] <= height[curX][curY]) {
+        if (curY + 1 < height[curX].length && height[curX][curY + 1] <= height[curX][curY]) {
             // 如果比他高
             pathList.add(new int[]{curX, curY});
+            int tmp = height[curX][curY];
+            height[curX][curY] = Integer.MAX_VALUE;
             dfs(height, curX, curY + 1, pathList, allowOutflow);
             pathList.remove(pathList.size() - 1);
+            height[curX][curY] = tmp;
         }
-        if (curY - 1 < 0 || height[curX][curY - 1] <= height[curX][curY]) {
+        if (curY - 1 >= 0 && height[curX][curY - 1] <= height[curX][curY]) {
             // 如果比他高
             pathList.add(new int[]{curX, curY});
+            int tmp = height[curX][curY];
+            height[curX][curY] = Integer.MAX_VALUE;
             dfs(height, curX, curY - 1, pathList, allowOutflow);
             pathList.remove(pathList.size() - 1);
+            height[curX][curY] = tmp;
         }
     }
 }
