@@ -24,6 +24,7 @@
         <module>priority-queue</module>
         <module>advanced-algorithms</module>
         <module>prefix-and</module>
+        <module>weekly-competition</module>
     </modules>
 
     <properties>
