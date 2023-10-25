@@ -1,4 +1,4 @@
-package com.guof.count_the_num_of_kfree_subsets;
+package com.guof.beautiful_subsets;
 
 /**
  * ClassName: Test
@@ -12,7 +12,5 @@ package com.guof.count_the_num_of_kfree_subsets;
 public class Test {
     public static void main(String[] args) {
         Solution solution = new Solution();
-        solution.countTheNumOfKFreeSubsets(new int[]{1,2,3,3}, 1);
-
     }
 }

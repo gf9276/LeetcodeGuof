@@ -1,11 +1,14 @@
-package com.guof.count_the_num_of_kfree_subsets;
+package com.guof.beautiful_subsets;
 
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 class Solution {
 
-    public long countTheNumOfKFreeSubsets(int[] nums, int k) {
+    public int beautifulSubsets(int[] nums, int k) {
         long output = 1;
         // 构建一个map，map的key是 num % k, value是一个按顺序排的list，其实可以不用map，用数组就好了
 
@@ -39,14 +42,14 @@ class Solution {
             for (int i = 2; i < dp.length; i++) {
                 // 先不考虑数字重复的问题
                 if (grpEntry.get(i - 1).getKey() - grpEntry.get(i - 2).getKey() == k) {
-                    // 如果非法，只能继承上上个，选他，和上个不选他
-                    dp[i] = dp[i - 2] * (1L << (grpEntry.get(i - 1).getValue() - 1)) + dp[i - 1];
+                    // 如果非法，选择上上个，继承/不继承，选择上一个，继承（注意重叠部分，所以才要dp[i - 1] - dp[i - 2]）
+                    dp[i] = dp[i - 2] * ((1L << grpEntry.get(i - 1).getValue())) + (dp[i - 1] - dp[i - 2]);
                 } else {
                     dp[i] = dp[i - 1] * (1L << (grpEntry.get(i - 1).getValue())); // 有  i  或者  没有  i
                 }
             }
             output *= dp[grp.size()];
         }
-        return output;
+        return (int) output - 1;
     }
 }
