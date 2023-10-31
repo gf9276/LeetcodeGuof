@@ -12,6 +12,6 @@ package com.guof.smallest_missing_value_subtree;
 public class Test {
     public static void main(String[] args) {
         Solution solution = new Solution();
-        solution.smallestMissingValueSubtree(new int[]{-1, 0, 0, 0, 2}, new int[]{6, 4, 3, 2, 1});
+        solution.smallestMissingValueSubtree(new int[]{-1, 0, 0, 2}, new int[]{1, 2, 3, 4});
     }
 }
