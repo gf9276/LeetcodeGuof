@@ -11,6 +11,6 @@ package com.guof.cmp_2023_12_09_119.number_of_sets;
  */
 public class Test {
     public static void main(String[] args) {
-        Solution solution = new Solution();
+//        Solution solution = new Solution();
     }
 }
