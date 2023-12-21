@@ -24,7 +24,14 @@ class Solution {
             String str = String.valueOf(mid);
             if (curPalindrome > mid) {
                 // 获取左侧回文串
-                mid -= (int) Math.pow(10, (double) (int) (str.length() / 2));
+                int tmp = mid - (int) Math.pow(10, (double) (int) (str.length() / 2));
+                if (String.valueOf(tmp).length() < String.valueOf(mid).length()) {
+                    char[] tmpChars = new char[String.valueOf(tmp).length()];
+                    Arrays.fill(tmpChars, '9');
+                    mid = Integer.parseInt(String.valueOf(tmpChars));
+                } else {
+                    mid = tmp;
+                }
             } else {
                 mid += (int) Math.pow(10, (double) (int) (str.length() / 2));
             }
