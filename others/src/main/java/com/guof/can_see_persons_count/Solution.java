@@ -12,14 +12,14 @@ class Solution {
         // 先用单调栈，找到当前右侧高度大于当前位置的点
         Deque<Integer> stack = new LinkedList<>(); // deque模拟stack
 
-        for (int i = heights.length - 1; i > -1; i--) {
-            // 单调栈，递减
+        for (int i = 0; i < heights.length; i++) {
+            // 单调栈
             while (!stack.isEmpty() && heights[stack.peekFirst()] < heights[i]) {
-                output[i]++;
-                stack.pollFirst();
+                // 比他小的都扔出去
+                output[stack.pollFirst()]++;
             }
             if (!stack.isEmpty()) {
-                output[i]++;
+                output[stack.peekFirst()]++;
             }
             stack.addFirst(i);
         }
