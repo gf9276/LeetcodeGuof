@@ -25,6 +25,7 @@
         <module>advanced-algorithms</module>
         <module>prefix-and</module>
         <module>weekly-competition</module>
+        <module>ling-dp</module>
     </modules>
 
     <properties>
